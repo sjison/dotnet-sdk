@@ -28,7 +28,6 @@ RUN  dotnet new web -n precache \
      && dotnet add precache2 package Microsoft.Extensions.Configuration.FileExtensions  -v 3.1.3  \                                            
      && dotnet add precache2 package Microsoft.Extensions.Configuration.Json  -v 3.1.3  \                                            
      && dotnet add precache2 package Microsoft.Extensions.Logging.Debug  -v 3.1.3  \                                              
-     && dotnet add precache2 package Serilog.AspNetCore  -v 3.2.0  \                                              
      && dotnet build precache2 \
      && dotnet nuget locals all --list  \
      && rm precache  -fr \
