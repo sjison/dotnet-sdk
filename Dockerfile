@@ -41,8 +41,15 @@ RUN  dotnet new web -n precache \
      && dotnet build precache3 \
      && rm precache3 -fr      \
      && dotnet new console -n precache4 \                                                             
+     && dotnet add precache4 package RabbitMQ.Client  -v 6.0.0-pre6  \                   
+     && dotnet add precache4 package Serilog  -v 2.9.0  \                        
+     && dotnet add precache4 package Serilog.Settings.Configuration  -v 3.1.0  \                             
+     && dotnet add precache4 package Serilog.Sinks.Console  -v 3.1.1  \                                  
+     && dotnet add precache4 package Serilog.Sinks.RollingFile  -v 3.3.0  \                                       
+     && dotnet add precache4 package Serilog.Sinks.Seq  -v 4.0.0  \                                            
      && dotnet build precache4 \
      && rm precache4 -fr      \     
      && dotnet nuget locals all --list  \  
+ 
      
  
