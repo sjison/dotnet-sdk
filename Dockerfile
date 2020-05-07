@@ -37,8 +37,12 @@ RUN  dotnet new web -n precache \
      && dotnet add precache3 package Microsoft.Extensions.Configuration.FileExtensions  -v 3.1.3  \                                            
      && dotnet add precache3 package Microsoft.Extensions.Configuration.Json  -v 3.1.3  \                                            
      && dotnet add precache3 package Microsoft.Extensions.Logging.Debug  -v 3.1.3  \         
+     && dotnet add precache3 package Newtonsoft.Json  -v 12.0.3  \              
      && dotnet build precache3 \
      && rm precache3 -fr      \
+     && dotnet new console -n precache4 \                                                             
+     && dotnet build precache4 \
+     && rm precache4 -fr      \     
      && dotnet nuget locals all --list  \  
      
  
