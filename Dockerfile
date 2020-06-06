@@ -48,11 +48,11 @@ RUN  dotnet new web -n precache \
      && dotnet add precache4 package Serilog.Sinks.RollingFile  -v 3.3.0  \                                       
      && dotnet add precache4 package Serilog.Sinks.Seq  -v 4.0.0  \                                            
      && dotnet add precache4 package NodaTime  -v 3.0.0  \     
-     && dotnet add precache3 package Microsoft.EntityFrameworkCore  -v 3.1.4  \                       
-     && dotnet add precache3 package Microsoft.EntityFrameworkCore.InMemory  -v 3.1.4  \                       
-     && dotnet add precache3 package Microsoft.EntityFrameworkCore.Proxies  -v 3.1.4  \                       
-     && dotnet add precache3 package Microsoft.EntityFrameworkCore.Relational  -v 3.1.4  \                       
-     && dotnet add precache3 package Microsoft.EntityFrameworkCore.SqlServer  -v 3.1.4  \                       
+     && dotnet add precache4 package Microsoft.EntityFrameworkCore  -v 3.1.4  \                       
+     && dotnet add precache4 package Microsoft.EntityFrameworkCore.InMemory  -v 3.1.4  \                       
+     && dotnet add precache4 package Microsoft.EntityFrameworkCore.Proxies  -v 3.1.4  \                       
+     && dotnet add precache4 package Microsoft.EntityFrameworkCore.Relational  -v 3.1.4  \                       
+     && dotnet add precache4 package Microsoft.EntityFrameworkCore.SqlServer  -v 3.1.4  \                       
      && dotnet build precache4 \
      && rm precache4 -fr      \     
      && dotnet new web -n precacheweb5 \
@@ -70,7 +70,9 @@ RUN  dotnet new web -n precache \
      && dotnet add precacheweb5 package Microsoft.VisualStudio.Web.CodeGeneration.Design -v 3.1.3 \
      && dotnet add precacheweb5 package NodaTime -v 3.0.0 \
      && dotnet add precacheweb5 package Serilog.AspNetCore -v 3.2.0 \
-     && dotnet add precacheweb5 package Swashbuckle.AspNetCore -v 5.4.1 \          
+     && dotnet add precacheweb5 package Swashbuckle.AspNetCore -v 5.4.1 \     
+     && dotnet build precacheweb5 \
+     && rm precacheweb5 -fr      \               
      && dotnet new console -n precacheconsole6 \                                                                  
      && dotnet add precacheconsole6 package Swashbuckle.AspNetCore -v 5.4.1 \     
      && dotnet add precacheconsole6 package Microsoft.Azure.Storage.Blob  -v 11.1.7 \
@@ -89,5 +91,7 @@ RUN  dotnet new web -n precache \
      && dotnet add precacheconsole6 package Serilog.Sinks.Console -v 3.1.1  \
      && dotnet add precacheconsole6 package Serilog.Sinks.RollingFile -v 3.3.0  \
      && dotnet add precacheconsole6 package Serilog.Sinks.Seq -v 4.0.0 \
+     && dotnet build precacheconsole6 \
+     && rm precacheconsole6 -fr      \                    
      && dotnet nuget locals all --list   
    
