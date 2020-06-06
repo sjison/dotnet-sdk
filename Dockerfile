@@ -55,7 +55,7 @@ RUN  dotnet new web -n precache \
      && dotnet add precache3 package Microsoft.EntityFrameworkCore.SqlServer  -v 3.1.4  \                       
      && dotnet build precache4 \
      && rm precache4 -fr      \     
-     && dotnet new web -n precacheweb5
+     && dotnet new web -n precacheweb5 \
      && dotnet add precacheweb5 package Microsoft.AspNetCore.Authentication.JwtBearer -v 3.1.4 \
      && dotnet add precacheweb5 package Microsoft.AspNetCore.ResponseCompression -v 2.2.0 \
      && dotnet add precacheweb5 package Microsoft.EntityFrameworkCore -v 3.1.4 \
