@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1.300-buster
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1.403-buster
 WORKDIR /app
 RUN wget -qO- https://raw.githubusercontent.com/Microsoft/artifacts-credprovider/master/helpers/installcredprovider.sh | bash
 RUN  dotnet new web -n precache \
