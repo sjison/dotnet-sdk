@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:5.0.2-focal-amd64
+FROM mcr.microsoft.com/dotnet/sdk:5.0.102-1-alpine3.12-amd64
 WORKDIR /app
 RUN wget -qO- https://raw.githubusercontent.com/Microsoft/artifacts-credprovider/master/helpers/installcredprovider.sh | bash
 RUN  dotnet new web -n precache \
